@@ -1,0 +1,5 @@
+- i need to figre out how to make the barrel export work
+- dont get scared that the page is currently empty, its broken because of the importing thing
+- i need to add every page i would need in the navbar
+- maybe add css
+- then work on the backend after this

@@ -1,12 +1,8 @@
 import { useState } from 'react'
 import './App.css'
-import { Navbar } from './components/Navbar'
 import { RouterContextProvider, Routes } from 'react-router-dom'
-import { Home } from './components/Home'
-import { First } from './components/First'
-import { Second } from './components/Second'
-import { Third } from './components/Third'
-import { Route } from 'react-router-dom'
+import { Navbar, Home, First, Second, Third } from './components';
+
 
 function App() {
 
