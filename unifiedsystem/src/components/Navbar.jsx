@@ -7,9 +7,16 @@ export const Navbar = () => {
         
         <ul>
             <Link to="/">Home</Link>
-           <li> <Link to="/first">First</Link></li>
-           <li> <Link to="/second">Second</Link> </li>
-           <li> <Link to="/third">Third</Link> </li>
+          <li><Link to="/pos">POS Terminal</Link></li>
+          <li><Link to="/transactions">Transactions</Link></li>
+          <li><Link to="/stocks">Stocks</Link></li>
+          <li><Link to="/employees">Employees</Link></li>
+          <li><Link to="/departments">Departments</Link></li>
+          <li><Link to="/attendance">Attendance</Link></li>
+          <li><Link to="/leave">Leave</Link></li>
+          <li><Link to="/payroll">Payroll</Link></li>
+          <li><Link to="/categories">Categories</Link></li>
+
         </ul>
     </nav>
   )
