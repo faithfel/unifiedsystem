@@ -1,8 +1,12 @@
 import { useState } from 'react'
 import './App.css'
 import { RouterContextProvider, Routes } from 'react-router-dom'
-import { Navbar, Home, First, Second, Third } from './components';
-
+import { Home } from './components/Home'
+import { Navbar } from './components/Navbar'
+import { First } from './components/First'
+import { Second } from './components/Second'
+import { Third } from './components/Third'
+import { Route } from 'react-router-dom'
 
 function App() {
 
