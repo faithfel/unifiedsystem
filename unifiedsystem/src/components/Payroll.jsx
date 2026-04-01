@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Payroll = () => {
+export const Payroll = () => {
   return (
     <div>Payroll</div>
   )

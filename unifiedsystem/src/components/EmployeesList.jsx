@@ -1,6 +1,6 @@
 import React from 'react'
 
-const EmployeesList = () => {
+export const EmployeesList = () => {
   return (
     <div>EmployeesList</div>
   )

@@ -1,10 +1,10 @@
 import React from 'react'
 
-export const POSTerminal = () => {
+export const POS = () => {
   return (
     <div>POSTerminal</div>
   )
 }
 
 
-export default POSTerminal
+export default POS

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Stocks = () => {
+export const Stocks = () => {
   return (
     <div>Stocks</div>
   )

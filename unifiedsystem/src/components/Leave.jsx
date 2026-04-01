@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Leave = () => {
+export const Leave = () => {
   return (
     <div>Leave</div>
   )

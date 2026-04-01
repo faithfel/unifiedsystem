@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Categories = () => {
+export const Categories = () => {
   return (
     <div>Categories</div>
   )
