@@ -18,8 +18,11 @@ function App() {
 
   return (
     <>
+    
       <Navbar />
+      
       <Routes >
+        
         <Route path="/" element={<Home />} />
         <Route path="/pos" element={<POS />} />
         <Route path="/transactions" element={<Transaction />} />
@@ -30,7 +33,6 @@ function App() {
         <Route path="/leave" element={<Leave />} />
         <Route path="/payroll" element={<Payroll />} />
         <Route path="/categories" element={<Categories />} />
-        
 
       </Routes>
     </>
