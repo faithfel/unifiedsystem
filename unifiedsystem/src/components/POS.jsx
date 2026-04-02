@@ -2,7 +2,9 @@ import React from 'react'
 
 export const POS = () => {
   return (
-    <div>POSTerminal</div>
+    <div className='maincontent'>
+      POSTerminal
+    </div>
   )
 }
 

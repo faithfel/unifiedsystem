@@ -2,7 +2,9 @@ import React from 'react'
 
 export const Leave = () => {
   return (
-    <div>Leave</div>
+    <div className='maincontent'>
+      Leave
+    </div>
   )
 }
 

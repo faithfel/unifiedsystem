@@ -2,7 +2,9 @@ import React from 'react'
 
 export const Transaction = () => {
   return (
-    <div>Transaction</div>
+    <div className='maincontent'>
+      Transaction
+    </div>
   )
 }
 
