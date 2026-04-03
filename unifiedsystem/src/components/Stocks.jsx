@@ -1,29 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export const Stocks = () => {
+
+  const [inputs, setInputs] = useState({})
+
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setInputs(values => ({...values, [name]: value}))
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault(); 
+
+    console.log(inputs);
+  }
+
   return (
     <div className='maincontent'>
       <h1>Stocks</h1>
 
-      <form>
+      <form onSubmit={handleSubmit}>
 
         <label>Product</label>
-        <input type="text" name="product" />
+        <input type="text" name="product" onChange={handleChange}/>
 
         <label>SKU</label>
-        <input type="text" name="sku" />
+        <input type="text" name="sku" onChange={handleChange} />
 
         <label>Category</label>
-        <input type="text" name="category" />
+        <input type="text" name="category" onChange={handleChange} />
 
         <label>Price</label>
-        <input type="text" name="price" />
+        <input type="text" name="price" onChange={handleChange} />
 
         <label>Stock</label>
-        <input type="text" name="stock" />
+        <input type="text" name="stock" onChange={handleChange} />
 
         <label>Status</label>
-        <input type="text" name="status" />
+        <input type="text" name="status" onChange={handleChange} />
 
         <button type="save">Save</button>
 
