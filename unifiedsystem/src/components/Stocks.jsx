@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import axios from 'axios';
 
 export const Stocks = () => {
 
@@ -13,6 +14,7 @@ export const Stocks = () => {
   const handleSubmit = (event) => {
     event.preventDefault(); 
 
+    axios.post('http://localhost:8080/api/stocks', inputs)
     console.log(inputs);
   }
 
