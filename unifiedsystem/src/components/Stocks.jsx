@@ -14,7 +14,7 @@ export const Stocks = () => {
   const handleSubmit = (event) => {
     event.preventDefault(); 
 
-    axios.post('http://localhost:8080/api/stocks', inputs)
+    axios.post('http://localhost:3306/api/save', inputs)
     console.log(inputs);
   }
 
