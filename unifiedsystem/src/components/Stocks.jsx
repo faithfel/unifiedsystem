@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios';
+import { Navigate } from 'react-router-dom';
 
 export const Stocks = () => {
 
@@ -14,8 +15,11 @@ export const Stocks = () => {
   const handleSubmit = (event) => {
     event.preventDefault(); 
 
-    axios.post('http://localhost/api/api.php', inputs)
-    console.log(inputs);
+    axios.post('http://localhost/api/api.php', inputs.then(function(response){
+      console.log(response.data);
+      Navigate('/stocks');
+    }));
+    
   }
 
   return (
