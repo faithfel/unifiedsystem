@@ -61,10 +61,12 @@ export const ListStocks = () => {
 
     axios.get('http://localhost/api/api.php').then(function(response){
       console.log(response.data);
+      setStocks(response.data);s
     });
 
   }
 
+  const [stocks, setStocks] = useState([]);
   useEffect(() => {
     getStocks();
   }, []);
@@ -72,6 +74,18 @@ export const ListStocks = () => {
   return (
     <div className='liststock'>
       <h1>Stocks List</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>SKU</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+      </table>
     </div>
   )
 
