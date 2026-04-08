@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 export const Stocks = () => {
   const Navigate = useNavigate();
@@ -16,10 +16,10 @@ export const Stocks = () => {
   const handleSubmit = (event) => {
     event.preventDefault(); 
 
-    axios.post('http://localhost/api/api.php', inputs.then(function(response){
+    axios.post('http://localhost/api/api.php', inputs).then(function(response){
       console.log(response.data);
       Navigate('/stocks');
-    }));
+    });
     
   }
 
@@ -61,7 +61,7 @@ export const ListStocks = () => {
 
     axios.get('http://localhost/api/api.php').then(function(response){
       console.log(response.data);
-      setStocks(response.data);s
+      setStocks(response.data);
     });
 
   }
@@ -77,6 +77,7 @@ export const ListStocks = () => {
       <table>
         <thead>
           <tr>
+            <th>ID</th>
             <th>Product</th>
             <th>SKU</th>
             <th>Category</th>
@@ -84,11 +85,26 @@ export const ListStocks = () => {
             <th>Stock</th>
             <th>Status</th>
           </tr>
+          
         </thead>
+        <tbody>
+          {stocks.map((stock, key) =>
+            <tr key={key}> 
+              <td>{stock.id}</td>
+              <td>{stock.product}</td>
+              <td>{stock.sku}</td>
+              <td>{stock.category}</td>
+              <td>{stock.price}</td>
+              <td>{stock.stock}</td>
+              <td>{stock.status}</td>
+              <td><><Link to={'stock/${stock.id/edit'}>Edit</Link><button>Delete</button></></td>
+            </tr>
+          )}
+        </tbody>
       </table>
     </div>
   )
 
 }
 
-export default ( Stocks, ListStocks )
+export default Stocks
