@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export const Stocks = () => {
+  const Navigate = useNavigate();
 
   const [inputs, setInputs] = useState({})
 
@@ -54,4 +55,26 @@ export const Stocks = () => {
   )
 }
 
-export default Stocks
+
+export const ListStocks = () => {
+  function getStocks() {
+
+    axios.get('http://localhost/api/api.php').then(function(response){
+      console.log(response.data);
+    });
+
+  }
+
+  useEffect(() => {
+    getStocks();
+  }, []);
+  
+  return (
+    <div className='liststock'>
+      <h1>Stocks List</h1>
+    </div>
+  )
+
+}
+
+export default ( Stocks, ListStocks )
