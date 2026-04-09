@@ -9,7 +9,7 @@ export const ListStocks = () => {
 
 
 
-    axios.get('http://localhost:8080/api/stock')
+    axios.get('http://localhost/api/api.php')
     .then(res => {
         console.log(res)
     }).catch((err) => {
