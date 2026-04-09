@@ -40,22 +40,21 @@ export const ListStocks = () => {
                   </tr>
               </thead>
                 <tbody>
-                    {
-                    stock?.map((stocks, key) => 
+                {stock?.map((item, key) => 
                     <tr key={key}>
-                        <td>{stocks.id}</td>
-                        <td>{stocks.product}</td>
-                        <td>{stocks.sku}</td>
-                        <td>{stocks.category}</td>
-                        <td>{stocks.price}</td>
-                        <td>{stocks.stock}</td>
-                        <td>{stocks.status}</td>
+                        <td>{item.id}</td>
+                        <td>{item.product}</td>
+                        <td>{item.sku}</td>
+                        <td>{item.category}</td>
+                        <td>{item.price}</td>
+                        <td>{item.stock}</td>
+                        <td>{item.status}</td>
                         <td>
-                            <Link to={`stock/${stocks.id}/edit`}><button>Edit</button></Link>    
+                            <Link to={`stock/${item.id}/edit`}><button>Edit</button></Link>    
                             <button>Delete</button>
                         </td>
                     </tr>
-                    )}
+                )}
               </tbody>
           </table>
       </div>
@@ -63,6 +62,6 @@ export const ListStocks = () => {
 
   )
 
-    }
+}
 
 export default ListStocks

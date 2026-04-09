@@ -1,3 +1,12 @@
+
+
+.stalinist-one-regular {
+  font-family: "Stalinist One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 body {
     background-color: #171616;
 }
@@ -25,9 +34,16 @@ ul {
     color: #ffffff;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
- 
-    
+    background-color: transparent;
+    padding: 4px;
 }
+.link:hover {
+    background-color: #09FF74;
+    color: #171616;
+    border-radius: 5px;
+    padding: 4px;
+}
+
 .linktext {
     margin: 5px;
     
@@ -36,6 +52,13 @@ ul {
     margin-left: 250px;
     display: flex;
     justify-content: center; 
-    align-items: center;     
-    background-color: green;
+    align-items: center;   
+
+}
+
+.hometitle {
+    font-family: Stalinist One;  
+    background: linear-gradient(to right, #09FF74 0%, #12CAE6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

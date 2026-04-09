@@ -3,7 +3,7 @@ import React from 'react'
 export const Home = () => {
   return (
     <div className='maincontent'>
-      Home
+     <h1 className='hometitle'> UNIFIED HUB </h1>
     </div>
   )
 }
