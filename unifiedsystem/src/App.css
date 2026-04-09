@@ -28,24 +28,27 @@ body {
 
 ul {   
     list-style-type: none;
+
 }
 
 .link {
     color: #ffffff;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: transparent;
+    background-color: #303030;
     padding: 4px;
+    
 }
 .link:hover {
     background-color: #09FF74;
     color: #171616;
     border-radius: 5px;
     padding: 4px;
+    
 }
 
 .linktext {
-    margin: 5px;
+
     
 }
 .maincontent {
