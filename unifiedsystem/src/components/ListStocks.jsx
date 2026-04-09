@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 export const ListStocks = () => {
-    const [stocks, setStocks] = useState([]);
+    const [stock, setStocks] = useState([]);
     
 
 
@@ -13,7 +13,7 @@ export const ListStocks = () => {
         axios.get('http://localhost/api/api.php')
         .then(response => {
             console.log(response.data);
-            setStocks(response.data);
+            setStocks(response.data.stocks); 
         }).catch((err) => {
             console.log(err)    
         })
@@ -39,20 +39,23 @@ export const ListStocks = () => {
                       <th>Status</th>
                   </tr>
               </thead>
-              <tbody>
-                  {
-                    stocks.map((stock) => (
-                      <tr key={stock.id}>
-                        <td>{stock.id}</td>
-                        <td>{stock.product}</td>
-                        <td>{stock.sku}</td>
-                        <td>{stock.category}</td>
-                        <td>{stock.price}</td>
-                        <td>{stock.stock}</td>
-                        <td>{stock.status}</td>
-                      </tr>
-                    ))
-                  }
+                <tbody>
+                    {
+                    stock?.map((stocks, key) => 
+                    <tr key={key}>
+                        <td>{stocks.id}</td>
+                        <td>{stocks.product}</td>
+                        <td>{stocks.sku}</td>
+                        <td>{stocks.category}</td>
+                        <td>{stocks.price}</td>
+                        <td>{stocks.stock}</td>
+                        <td>{stocks.status}</td>
+                        <td>
+                            <Link to={`stock/${stocks.id}/edit`}><button>Edit</button></Link>    
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                    )}
               </tbody>
           </table>
       </div>
