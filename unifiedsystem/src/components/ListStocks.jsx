@@ -5,15 +5,19 @@ import { Link } from 'react-router-dom';
 
 
 export const ListStocks = () => {
-  const [data, setStocks] = useState([]);
 
-  useEffect(() => {
-    axios.get('http://localhost/api/api.php').then(res => setStocks(res.data))
-    .catch(err => console.log(err));
-  }, []);
-  
 
-  
+
+
+    axios.get('http://localhost:8080/api/stock')
+    .then(res => {
+        console.log(res)
+    }).catch((err) => {
+        console.log(err)    
+    })
+ 
+
+  /*
   return (
     <><div className='maincontent'>
         <div className='liststock'>
@@ -52,7 +56,7 @@ export const ListStocks = () => {
     </>
 
   )
-
+*/
 }
 
 export default ListStocks
