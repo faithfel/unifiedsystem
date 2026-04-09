@@ -6,7 +6,7 @@ import { Home } from './components/Home'
 import { POS } from './components/POS'
 import { Transaction } from './components/Transaction'
 import { Stocks } from './components/Stocks'
-import { ListStocks } from './components/ListStock'
+import { ListStocks } from './components/ListStocks'
 import { EmployeesList } from './components/EmployeesList'
 import { Departments } from './components/Departments'
 import { Attendance } from './components/Attendance'
@@ -27,6 +27,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/pos" element={<POS />} />
         <Route path="/transactions" element={<Transaction />} />
+        <Route path="/liststocks" element={<ListStocks />} />
         <Route path="/stocks" element={<Stocks />} />
         <Route path="/employees" element={<EmployeesList />} />
         <Route path="/departments" element={<Departments />} />
@@ -36,7 +37,7 @@ function App() {
         <Route path="/categories" element={<Categories />} />
 
       </Routes>
-      </div>
+      </div>  
     </>
   )
 }

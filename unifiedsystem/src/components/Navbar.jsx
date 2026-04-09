@@ -10,6 +10,7 @@ export const Navbar = () => {
           <div className='linktext'>
             <li><Link className="link" to="/pos">POS Terminal</Link></li>
             <li><Link className="link"to="/transactions">Transactions</Link></li>
+            <li><Link className="link"to="/liststocks">List Stocks</Link></li>
             <li><Link className="link"to="/stocks">Stocks</Link></li>
             <li><Link className="link"to="/employees">Employees</Link></li>
             <li><Link className="link"to="/departments">Departments</Link></li>
