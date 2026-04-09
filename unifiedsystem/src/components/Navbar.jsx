@@ -5,22 +5,72 @@ export const Navbar = () => {
   return (
     <nav className='navbar'>
         
-        <ul>
-          
-          <div className='linktext'>
-            <li><Link className="link"to="/">Home</Link></li>
-            <li><Link className="link" to="/pos">POS Terminal</Link></li>
-            <li><Link className="link"to="/transactions">Transactions</Link></li>
-            <li><Link className="link"to="/liststocks">List Stocks</Link></li>
-            <li><Link className="link"to="/stocks">Stocks</Link></li>
-            <li><Link className="link"to="/employees">Employees</Link></li>
-            <li><Link className="link"to="/departments">Departments</Link></li>
-            <li><Link className="link"to="/attendance">Attendance</Link></li>
-            <li><Link className="link"to="/leave">Leave</Link></li>
-            <li><Link className="link"to="/payroll">Payroll</Link></li>
-            <li><Link className="link"to="/categories">Categories</Link></li>
-          </div>
-        </ul>
+
+          <Link className="link"to="/">
+            <div className='linktext'>
+              Home
+            </div>
+          </Link>
+
+          <Link className="link" to="/pos">
+            <div className='linktext'>
+             POS Terminal
+            </div>
+          </Link>
+
+          <Link className="link"to="/transactions">
+            <div className='linktext'>
+              Transactions
+            </div>
+          </Link>
+
+          <Link className="link"to="/liststocks">
+            <div className='linktext'>
+              List Stocks
+            </div>
+          </Link>
+
+          <Link className="link"to="/stocks">
+            <div className='linktext'>
+              Stocks
+            </div>
+          </Link>
+
+          <Link className="link"to="/employees">
+            <div className='linktext'>
+              Employees
+            </div>
+          </Link>
+
+          <Link className="link"to="/departments">
+            <div className='linktext'>
+              Departmentsx
+            </div>
+          </Link>
+
+          <Link className="link"to="/attendance">
+            <div className='linktext'>
+              Attendance
+            </div>
+          </Link>
+
+          <Link className="link"to="/leave">
+            <div className='linktext'>
+              Leave
+            </div>
+          </Link>
+
+          <Link className="link"to="/payroll">
+            <div className='linktext'>
+              Payrollx
+            </div>
+          </Link>
+
+          <Link className="link"to="/categories">
+            <div className='linktext'>
+            Categories
+            </div>
+          </Link>
     </nav>
   )
 }

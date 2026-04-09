@@ -17,16 +17,19 @@ body {
     position: fixed;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;  
-    height: 100%;
-    width: 15%;
+    height: 100vh;
+    width: 250px;
     top: 0;
     left: 0;
     overflow-x: hidden;
     padding-top: 20px;
+    overflow: auto; 
+    resize: horizontal;
+
 }
 
 li {
-    margin: 25px;
+
 }
 
 ul {   
@@ -38,24 +41,24 @@ ul {
     color: #ffffff;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #303030;
-    padding: 10px;
-    border-radius: 5px;
-   
-    
 }
+
 .link:hover {
-    
     color: #171616;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.linktext {
+    background-color: #303030;
+    padding: 1pc;
     border-radius: 5px;
-    padding: 10px;
+}
+
+.linktext:hover {
+    border-radius: 5px;
     background-color: #09FF74;
 }
 
-.linktext {
-
-    
-}
 .maincontent {
     margin-left: 250px;
     display: flex;
