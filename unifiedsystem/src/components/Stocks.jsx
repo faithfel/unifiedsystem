@@ -58,7 +58,7 @@ export const Stocks = () => {
 
 export const ListStocks = () => {
 
-  const [stocks, setStocks] = useState({});
+  const [stocks, setStocks] = useState([]);
 
   function getStocks() {
     axios.get('http://localhost/api/api.php').then(function(response){
@@ -99,7 +99,10 @@ export const ListStocks = () => {
               <td>{stock.price}</td>
               <td>{stock.stock}</td>
               <td>{stock.status}</td>
-              <td><><Link to={'stock/${stock.id/edit'}>Edit</Link><button>Delete</button></></td>
+              <td>
+                <Link to={`stock/${stock.id}/edit`}>Edit</Link>
+                <button>Delete</button>
+              </td>
             </tr>
           )}
         </tbody>
