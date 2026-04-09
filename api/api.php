@@ -19,6 +19,20 @@
     $method = $_SERVER['REQUEST_METHOD'];
 
     switch($method){
+    case "GET":
+      $sql = "SELECT * FROM stock ";
+      $stmt = $conn->prepare($sql);
+      $stmt->execute();
+      $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      if ($users === false) {
+          $response = ['status' => 0, 'message' => 'Failed to fetch records'];
+          echo json_encode($response);
+      } else {
+          echo json_encode($users);
+      }
+      break;
+
+
     case 'POST':
         $user = json_decode(file_get_contents('php://input'));
         $sql = "INSERT INTO stock(id, product, sku, category, price, stock, status) VALUES(null, :product, :sku, :category, :price, :stock, :status)";
