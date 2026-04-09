@@ -27,7 +27,7 @@ export const Stocks = () => {
     <div className='maincontent'>
       <h1>Stocks</h1>
 
-      <form onSubmit={handleSubmit}>
+      <form className="addstock" onSubmit={handleSubmit}>
 
         <label>Product</label>
         <input type="text" name="product" onChange={handleChange}/>
