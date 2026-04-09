@@ -57,18 +57,11 @@ export const Stocks = () => {
 
 
 export const ListStocks = () => {
-
   const [stocks, setStocks] = useState([]);
 
-  function getStocks() {
-    axios.get('http://localhost/api/api.php').then(function(response){
-      console.log(response.data);
-      setStocks(response.data);
-    });
-  }
-
   useEffect(() => {
-    getStocks();
+    axios.get('http://localhost/api/api.php').then(res => setStocks(res.data))
+    .catch(err => console.log(err));
   }, []);
   
 
