@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export const Stocks = () => {
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
 
   const [inputs, setInputs] = useState({})
 
@@ -18,9 +19,8 @@ export const Stocks = () => {
 
     axios.post('http://localhost/api/api.php', inputs).then(function(response){
       console.log(response.data);
-      Navigate('/stocks');
+      navigate('/stocks');
     });
-    
   }
 
   return (
@@ -57,19 +57,21 @@ export const Stocks = () => {
 
 
 export const ListStocks = () => {
-  function getStocks() {
 
+  const [stocks, setStocks] = useState({});
+
+  function getStocks() {
     axios.get('http://localhost/api/api.php').then(function(response){
       console.log(response.data);
       setStocks(response.data);
     });
-
   }
 
-  const [stocks, setStocks] = useState([]);
   useEffect(() => {
     getStocks();
   }, []);
+  
+
   
   return (
     <div className='liststock'>
