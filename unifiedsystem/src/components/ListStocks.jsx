@@ -1,25 +1,30 @@
-import React, { useEffect, useState } from 'react'
+import React, { use, useEffect, useState } from 'react'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 
 
 export const ListStocks = () => {
+    const [stocks, setStocks] = useState([]);
+    
 
 
+    function getStocks() {
+        axios.get('http://localhost/api/api.php')
+        .then(response => {
+            console.log(response.data);
+            setStocks(response.data);
+        }).catch((err) => {
+            console.log(err)    
+        })
+    }
 
+    useEffect(() => {
+        getStocks();
+    }, []);
 
-    axios.get('http://localhost/api/api.php')
-    .then(res => {
-        console.log(res)
-    }).catch((err) => {
-        console.log(err)    
-    })
- 
-
-  /*
   return (
-    <><div className='maincontent'>
+    <div className='maincontent'>
         <div className='liststock'>
           <h1>Stocks List</h1>
           <table>
@@ -33,11 +38,10 @@ export const ListStocks = () => {
                       <th>Stock</th>
                       <th>Status</th>
                   </tr>
-
               </thead>
               <tbody>
                   {
-                    data.map((stock) => (
+                    stocks.map((stock) => (
                       <tr key={stock.id}>
                         <td>{stock.id}</td>
                         <td>{stock.product}</td>
@@ -53,10 +57,9 @@ export const ListStocks = () => {
           </table>
       </div>
       </div>
-    </>
 
   )
-*/
-}
+
+    }
 
 export default ListStocks
