@@ -9,9 +9,7 @@ export const Navbar = () => {
 
           <Link className="link"to="/">
             <div >
-              
               <h2 className='homebutton'>
-                <img className='homeicon' src='/public/home.svg' />
                 Home
               </h2>
             </div>
