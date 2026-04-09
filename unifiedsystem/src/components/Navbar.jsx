@@ -12,6 +12,10 @@ export const Navbar = () => {
             </div>
           </Link>
 
+        <div className='navtitle'>
+          Point of Sale
+        </div>
+
           <Link className="link" to="/pos">
             <div className='linktext'>
              POS Terminal
@@ -30,6 +34,10 @@ export const Navbar = () => {
             </div>
           </Link>
 
+        <div className='navtitle'>
+          Employees
+        </div>
+
           <Link className="link"to="/stocks">
             <div className='linktext'>
               Stocks
@@ -44,7 +52,7 @@ export const Navbar = () => {
 
           <Link className="link"to="/departments">
             <div className='linktext'>
-              Departmentsx
+              Departments
             </div>
           </Link>
 
@@ -62,7 +70,7 @@ export const Navbar = () => {
 
           <Link className="link"to="/payroll">
             <div className='linktext'>
-              Payrollx
+              Payroll
             </div>
           </Link>
 

@@ -73,3 +73,9 @@ ul {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.navtitle {
+    color: #09FF74;
+    font-family: "Stalinist One", sans-serif;
+    margin: 5px;
+}
