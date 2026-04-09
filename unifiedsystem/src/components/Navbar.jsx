@@ -6,8 +6,9 @@ export const Navbar = () => {
     <nav className='navbar'>
         
         <ul>
-          <Link className="link"to="/">Home</Link>
+          
           <div className='linktext'>
+            <li><Link className="link"to="/">Home</Link></li>
             <li><Link className="link" to="/pos">POS Terminal</Link></li>
             <li><Link className="link"to="/transactions">Transactions</Link></li>
             <li><Link className="link"to="/liststocks">List Stocks</Link></li>

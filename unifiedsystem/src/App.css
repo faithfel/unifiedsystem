@@ -27,12 +27,11 @@ body {
 
 li {
     margin: 25px;
-
 }
 
 ul {   
     list-style-type: none;
-
+    
 }
 
 .link {
@@ -46,11 +45,11 @@ ul {
     
 }
 .link:hover {
-    background-color: #09FF74;
+    
     color: #171616;
     border-radius: 5px;
     padding: 10px;
-    
+    background-color: #09FF74;
 }
 
 .linktext {
