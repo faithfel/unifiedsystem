@@ -19,7 +19,7 @@ export const Stocks = () => {
 
     axios.post('http://localhost/api/api.php', inputs).then(function(response){
       console.log(response.data);
-      navigate('/stocks');
+      navigate('/liststocks');
     });
   }
 
