@@ -33,13 +33,13 @@ export const ListStocks = () => {
           <table className='stocktable'>
               <thead>
                   <tr>
-                      <th>ID</th>
-                      <th>Product</th>
-                      <th>SKU</th>
-                      <th>Category</th>
-                      <th>Price</th>
-                      <th>Stock</th>
-                      <th>Status</th>
+                      <th className='tablelabel'>ID</th>
+                      <th className='tablelabel'>Product</th>
+                      <th className='tablelabel'>SKU</th>
+                      <th className='tablelabel'>Category</th>
+                      <th className='tablelabel'>Price</th>
+                      <th className='tablelabel'>Stock</th>
+                      <th className='tablelabel'>Status</th>
                   </tr>
               </thead>
                 <tbody>
