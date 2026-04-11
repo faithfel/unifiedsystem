@@ -118,9 +118,14 @@ ul {
     margin-left: 25%;
     margin-right: 25%;
     margin-top: 5%;
-    display:grid;
+    display:flex;
+    
 }
-
+.addbuttonrow {
+    float: right;
+    margin: 20px;
+    margin-right: 20%;
+}
 .stocktitle {
     color: #ffffff;
     font-size: 45px;
@@ -149,4 +154,10 @@ input {
 
 .stocktable {
     background-color: ;
+}
+
+.addstockrow {
+    display: inline-block; width: 49%;
+    gap: 10px;
+    vertical-align: top;
 }

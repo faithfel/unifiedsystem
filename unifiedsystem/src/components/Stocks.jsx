@@ -32,7 +32,7 @@ export const Stocks = () => {
       
     
     <div className='addstock'>
-      <h1 className="stocktitle">Add Stock</h1>
+
       <form onSubmit={handleSubmit}>
         
         <div className='addstockrow'>
