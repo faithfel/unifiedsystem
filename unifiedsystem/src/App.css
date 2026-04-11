@@ -120,6 +120,7 @@ ul {
     margin-right: 25%;
     margin-top: 10%;
     display:flex;
+    position: relative;
     
 }
 .addbuttonrow {
@@ -160,4 +161,20 @@ input {
 .addstockrow {
     display: inline-block; width: 45%;
     vertical-align: top;
+}
+
+.dropdown {
+    border-radius: 8px;
+    background-color: #373737;
+    border:none;
+    color: #ffffff;
+}
+
+.backbutton {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    position: absolute;
+    top: 15px;
+    right: 15px;
 }

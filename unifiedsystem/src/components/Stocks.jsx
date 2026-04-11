@@ -32,11 +32,12 @@ export const Stocks = () => {
       
     
     <div className='addstock'>
-
+      <a href="/liststocks" ><button className='backbutton'>X</button></a>
+      
       <form onSubmit={handleSubmit}>
         
         <div className='addstockrow'>
-          <label className='addstocklabel'>Product:</label>
+          <label className='addstocklabel' >Product:</label>
           <input type="text" name="product" onChange={handleChange} placeholder="product name"/>
         </div>
 
@@ -60,8 +61,13 @@ export const Stocks = () => {
         </div>
 
         <div className='addstockrow'>
-          <label className='addstocklabel' >Status:</label>
-          <input type="text" name="status" onChange={handleChange} placeholder="set status"/>
+          <label className='addstocklabel' >Status:</label> <br />
+          <select className="dropdown" onChange={handleChange} name="status">
+              <optgroup label="Select Status">
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+              </optgroup>
+          </select>
         </div>
 
         <div className='addbuttonrow'>
