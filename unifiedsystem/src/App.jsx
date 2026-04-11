@@ -12,7 +12,8 @@ import { Departments } from './components/Departments'
 import { Attendance } from './components/Attendance'
 import { Leave } from './components/Leave'
 import { Payroll } from './components/Payroll'
-import { Categories } from './components/Categories'        
+import { Categories } from './components/Categories'    
+import { AddEmployees } from './components/AddEmployees'    
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/liststocks" element={<ListStocks />} />
         <Route path="/stocks" element={<Stocks />} />
         <Route path="/employees" element={<EmployeesList />} />
+        <Route path="/addemployees" element={<AddEmployees />} />
         <Route path="/departments" element={<Departments />} />
         <Route path="/attendance" element={<Attendance />} />
         <Route path="/leave" element={<Leave />} />
