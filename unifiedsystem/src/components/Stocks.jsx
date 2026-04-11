@@ -25,30 +25,30 @@ export const Stocks = () => {
 
   return (
     <div className='maincontent'>
-      <h1 className="stocktitle">Stocks</h1>
+      
     
     <div className='addstock'>
       <form onSubmit={handleSubmit}>
 
-        <label>Product</label>
-        <input type="text" name="product" onChange={handleChange}/>
+        <label className='addstocklabel'>Product:</label><br></br>
+        <input type="text" name="product" onChange={handleChange} placeholder="product name"/><br></br>
 
-        <label>SKU</label>
-        <input type="text" name="sku" onChange={handleChange} />
+        <label className='addstocklabel'>SKU:</label><br></br>
+        <input type="text" name="sku" onChange={handleChange} placeholder="sku"/><br></br>
 
-        <label>Category</label>
-        <input type="text" name="category" onChange={handleChange} />
+        <label className='addstocklabel'>Category:</label><br></br>
+        <input type="text" name="category" onChange={handleChange} placeholder="item label"/><br></br>
 
-        <label>Price</label>
-        <input type="text" name="price" onChange={handleChange} />
+        <label className='addstocklabel'>Price:</label><br></br>
+        <input type="text" name="price" onChange={handleChange} placeholder="set price"/><br></br>
 
-        <label>Stock</label>
-        <input type="text" name="stock" onChange={handleChange} />
+        <label className='addstocklabel'>Stock:</label><br></br>
+        <input type="text" name="stock" onChange={handleChange} placeholder="stock count"/><br></br>
 
-        <label>Status</label>
-        <input type="text" name="status" onChange={handleChange} />
+        <label className='addstocklabel' >Status:</label><br></br>
+        <input type="text" name="status" onChange={handleChange} placeholder="set status"/><br></br>
 
-        <button type="save">Save</button>
+        <button className='addstockbutton' type="save">Save</button>
 
 
       </form>
