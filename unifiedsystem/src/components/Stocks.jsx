@@ -34,28 +34,40 @@ export const Stocks = () => {
     <div className='addstock'>
       <h1 className="stocktitle">Add Stock</h1>
       <form onSubmit={handleSubmit}>
-
-        <label className='addstocklabel'>Product:</label><br></br>
-        <input type="text" name="product" onChange={handleChange} placeholder="product name"/><br></br>
-
-        <label className='addstocklabel'>SKU:</label><br></br>
-        <input type="text" name="sku" onChange={handleChange} placeholder="sku"/><br></br>
-
-        <label className='addstocklabel'>Category:</label><br></br>
-        <input type="text" name="category" onChange={handleChange} placeholder="item label"/><br></br>
-
-        <label className='addstocklabel'>Price:</label><br></br>
-        <input type="text" name="price" onChange={handleChange} placeholder="set price"/><br></br>
-
-        <label className='addstocklabel'>Stock:</label><br></br>
-        <input type="text" name="stock" onChange={handleChange} placeholder="stock count"/><br></br>
-
-        <label className='addstocklabel' >Status:</label><br></br>
-        <input type="text" name="status" onChange={handleChange} placeholder="set status"/><br></br>
-
-        <button className='addstockbutton' type="save" onClick={handleCancel}>Cancel</button>
-        <button className='addstockbutton' type="save">Save</button>
         
+        <div className='addstockrow'>
+          <label className='addstocklabel'>Product:</label>
+          <input type="text" name="product" onChange={handleChange} placeholder="product name"/>
+        </div>
+
+        <div className='addstockrow'>
+          <label className='addstocklabel'>SKU:</label>
+          <input type="text" name="sku" onChange={handleChange} placeholder="sku"/>
+        </div>
+
+        <div className='addstockrow'>
+          <label className='addstocklabel'>Category:</label>
+          <input type="text" name="category" onChange={handleChange} placeholder="item label"/> 
+        </div>
+
+        <div className='addstockrow'>
+          <label className='addstocklabel'>Price:</label>
+          <input type="text" name="price" onChange={handleChange} placeholder="set price"/>
+        </div>
+        <div className='addstockrow'>
+          <label className='addstocklabel'>Stock:</label>
+          <input type="text" name="stock" onChange={handleChange} placeholder="stock count"/>
+        </div>
+
+        <div className='addstockrow'>
+          <label className='addstocklabel' >Status:</label>
+          <input type="text" name="status" onChange={handleChange} placeholder="set status"/>
+        </div>
+
+        <div className='addbuttonrow'>
+          <button className='addstockbutton' type="save" onClick={handleCancel}>Cancel</button>
+          <button className='addstockbutton' type="save">Save</button>
+        </div>
         
         
 
