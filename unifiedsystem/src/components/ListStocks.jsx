@@ -27,6 +27,9 @@ export const ListStocks = () => {
     <div className='maincontent'>
         <div className='liststock'>
           <h1 className="stocktitle">Stocks List</h1>
+
+            <a href="/stocks" ><button className='addstockinlist'>Add Stock</button></a>
+
           <table className='stocktable'>
               <thead>
                   <tr>

@@ -178,3 +178,17 @@ input {
     top: 15px;
     right: 15px;
 }
+
+.liststock{
+    position: relative;
+}
+
+.addstockinlist {
+    background-color: #09FF74;
+    border: transparent;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    top:50px;
+    right: 0px;
+}

@@ -37,11 +37,7 @@ export const Navbar = () => {
             </div>
           </Link>
 
-          <Link className="link"to="/stocks">
-            <div className='linktext'>
-              Stocks
-            </div>
-          </Link>
+
           
         <div className='navtitle'>
           Employees
