@@ -112,19 +112,20 @@ ul {
     color:#ffffff;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #181717;
-    padding: 25px;
+    padding: 30px;
+    padding-left: 8%;
     border-radius: 10px;
-    min-width: 600px;
+    min-width: 200px;
     margin-left: 25%;
     margin-right: 25%;
-    margin-top: 5%;
+    margin-top: 10%;
     display:flex;
     
 }
 .addbuttonrow {
     float: right;
     margin: 20px;
-    margin-right: 20%;
+    margin-right: 15%
 }
 .stocktitle {
     color: #ffffff;
@@ -157,7 +158,6 @@ input {
 }
 
 .addstockrow {
-    display: inline-block; width: 49%;
-    gap: 10px;
+    display: inline-block; width: 45%;
     vertical-align: top;
 }
