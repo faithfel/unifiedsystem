@@ -26,7 +26,7 @@ export const ListStocks = () => {
   return (
     <div className='maincontent'>
         <div className='liststock'>
-          <h1>Stocks List</h1>
+          <h1 className="stocktitle">Stocks List</h1>
           <table>
               <thead>
                   <tr>

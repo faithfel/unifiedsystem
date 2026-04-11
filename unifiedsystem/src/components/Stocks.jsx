@@ -25,9 +25,10 @@ export const Stocks = () => {
 
   return (
     <div className='maincontent'>
-      <h1>Stocks</h1>
-
-      <form className="addstock" onSubmit={handleSubmit}>
+      <h1 className="stocktitle">Stocks</h1>
+    
+    <div className='addstock'>
+      <form onSubmit={handleSubmit}>
 
         <label>Product</label>
         <input type="text" name="product" onChange={handleChange}/>
@@ -51,6 +52,7 @@ export const Stocks = () => {
 
 
       </form>
+      </div>
     </div>
   )
 }
