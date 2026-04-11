@@ -6,9 +6,6 @@
 
     $con = mysqli_connect("localhost", "root", "", "unifiedsystem");
     
-    if($con){
-        echo "DB CONNECTED";
-    }
 
     include 'DbConnect.php';
     $obDb = new DbConnect();
