@@ -22,12 +22,17 @@ export const Stocks = () => {
       navigate('/liststocks');
     });
   }
+  const handleCancel = (event) => {
+    event.preventDefault(); 
+    navigate('/liststocks');
+  }
 
   return (
     <div className='maincontent'>
       
     
     <div className='addstock'>
+      <h1 className="stocktitle">Add Stock</h1>
       <form onSubmit={handleSubmit}>
 
         <label className='addstocklabel'>Product:</label><br></br>
@@ -48,8 +53,11 @@ export const Stocks = () => {
         <label className='addstocklabel' >Status:</label><br></br>
         <input type="text" name="status" onChange={handleChange} placeholder="set status"/><br></br>
 
+        <button className='addstockbutton' type="save" onClick={handleCancel}>Cancel</button>
         <button className='addstockbutton' type="save">Save</button>
-
+        
+        
+        
 
       </form>
       </div>

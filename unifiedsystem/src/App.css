@@ -114,9 +114,11 @@ ul {
     background-color: #181717;
     padding: 25px;
     border-radius: 10px;
-    max-width: 1000px;
+    min-width: 600px;
     margin-left: 25%;
     margin-right: 25%;
+    margin-top: 5%;
+    display:grid;
 }
 
 .stocktitle {
