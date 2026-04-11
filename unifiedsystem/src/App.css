@@ -167,7 +167,8 @@ input {
     border-radius: 8px;
     background-color: #373737;
     border:none;
-    color: #ffffff;
+    color: #737575;
+    padding: 4px;
 }
 
 .backbutton {
