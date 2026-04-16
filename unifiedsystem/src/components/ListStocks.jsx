@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 export const ListStocks = () => {
-    const [stock, setStocks] = useState([]);
+    const [stocks, setStocks] = useState([]);
     
 
 
@@ -43,21 +43,12 @@ export const ListStocks = () => {
                   </tr>
               </thead>
                 <tbody>
-                {stock?.map((item, key) => 
-                    <tr key={key}>
-                        <td>{item.id}</td>
-                        <td>{item.product}</td>
-                        <td>{item.sku}</td>
-                        <td>{item.category}</td>
-                        <td>{item.price}</td>
-                        <td>{item.stock}</td>
-                        <td>{item.status}</td>
-                        <td>
-                            <Link to={`stock/${item.id}/edit`}><button>Edit</button></Link>    
-                            <button>Delete</button>
-                        </td>
-                    </tr>
-                )}
+                    {stocks?.map(item => 
+                    <div key={item.id}>{item.name}</div>
+                    
+                    
+                    )}
+                       
               </tbody>
           </table>
       </div>
