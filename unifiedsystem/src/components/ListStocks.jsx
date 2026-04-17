@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 export const ListStocks = () => {
-    const [stocks, setStocks] = useState([]);
+    const [stocks, setStocks] = useState('');
     
 
 
@@ -43,15 +43,12 @@ export const ListStocks = () => {
                   </tr>
               </thead>
                 <tbody>
-                    {stocks?.map(item => 
-                    <div key={item.id}>{item.name}</div>
                     
-                    
-                    )}
                        
               </tbody>
           </table>
       </div>
+      {stocks}
       </div>
 
   )
