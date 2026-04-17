@@ -5,28 +5,20 @@ import { Link } from 'react-router-dom';
 
 
 export const ListStocks = () => {
-    const [stocks, setStocks] = useState([]);
-    
-    const stock = {
-        id: 1,
-        product: "product name",
-        sku: "sku",
-        category: "item label",
-        price: "set price",
-        stock: "stock count",
-        status: "status"
-    }
-
 
     function getStocks() {
         axios.get('http://localhost/api/api.php')
         .then(response => {
             console.log(response.data);
-            setStocks(response.data.stocks); 
+            setStocks(Array.isArray(response.data.stocks) ? response.data.data : []);
         }).catch((err) => {
             console.log(err)    
         })
     }
+
+
+    const [stocks, setStocks] = useState([]);
+
 
     useEffect(() => {
         getStocks();
@@ -54,7 +46,13 @@ export const ListStocks = () => {
                 <tbody>
                     {stocks && stocks.map((stock) => (
                         <tr key={stock.id}>
-                            <td className='tabledata'>{stock.id}</td>   
+                            <td className='tabledata'>{stock.id}</td> 
+                            <td className='tabledata'>{stock.product}</td>
+                            <td className='tabledata'>{stock.sku}</td>
+                            <td className='tabledata'>{stock.category}</td>
+                            <td className='tabledata'>{stock.price}</td>
+                            <td className='tabledata'>{stock.stock}</td>
+                            <td className='tabledata'>{stock.status}</td>  
                        </tr>
                     ))}
               </tbody>
