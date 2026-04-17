@@ -10,7 +10,7 @@ export const ListStocks = () => {
         axios.get('http://localhost/api/api.php')
         .then(response => {
             console.log(response.data);
-            setStocks(Array.isArray(response.data.stocks) ? response.data.data : []);
+            setStocks(response.data.stocks);
         }).catch((err) => {
             console.log(err)    
         })
@@ -23,6 +23,8 @@ export const ListStocks = () => {
     useEffect(() => {
         getStocks();
     }, []);
+
+    
 
   return (
     <div className='maincontent'>
@@ -44,17 +46,12 @@ export const ListStocks = () => {
                   </tr>
               </thead>
                 <tbody>
-                    {stocks && stocks.map((stock) => (
-                        <tr key={stock.id}>
-                            <td className='tabledata'>{stock.id}</td> 
-                            <td className='tabledata'>{stock.product}</td>
-                            <td className='tabledata'>{stock.sku}</td>
-                            <td className='tabledata'>{stock.category}</td>
-                            <td className='tabledata'>{stock.price}</td>
-                            <td className='tabledata'>{stock.stock}</td>
-                            <td className='tabledata'>{stock.status}</td>  
-                       </tr>
-                    ))}
+{stocks && stocks.length > 0 ? (
+  stocks.map(user => <li key={user.id}>{user.name}</li>)
+) : (
+  <p>Loading...</p>
+)}
+      
               </tbody>
           </table>
       </div>
