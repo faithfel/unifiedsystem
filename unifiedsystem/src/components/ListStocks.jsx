@@ -7,6 +7,15 @@ import { Link } from 'react-router-dom';
 export const ListStocks = () => {
     const [stocks, setStocks] = useState([]);
     
+    const stock = {
+        id: 1,
+        product: "product name",
+        sku: "sku",
+        category: "item label",
+        price: "set price",
+        stock: "stock count",
+        status: "status"
+    }
 
 
     function getStocks() {
@@ -43,7 +52,7 @@ export const ListStocks = () => {
                   </tr>
               </thead>
                 <tbody>
-                    {stocks.map((stock) => (
+                    {stocks && stocks.map((stock) => (
                         <tr key={stock.id}>
                             <td className='tabledata'>{stock.id}</td>   
                        </tr>
